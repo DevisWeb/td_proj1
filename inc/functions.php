@@ -25,12 +25,13 @@ $quotes = array(
         )
 )
 */
+
 $quotes = array(
     [
         "quote" => "quote1",
         "source" => "src1",
         "citation" => "cit1", 
-        "year" => 2020,
+        "year" => "2020",
     ],
     ["quote" => "quote2",
         "source" => "src2"
@@ -45,6 +46,9 @@ $quotes = array(
         "source" => "src5"
     ]
 );
+echo "<pre>";
+// print_r($quotes);
+echo "</pre>";
 
 // #################################################################
 // Create the getRandomQuuote function and name it getRandomQuote
@@ -55,16 +59,32 @@ $quotes = array(
 // ==> remember method of finding random number_format
 // select items with "box notation" array[0]
 
-function getRandomQuote(array $quotes) { 
+ function getRandomQuote(array $quotes) { 
     // generate a random number between 0 and the last index in the array parameter
     // use the random number and box notation to grab a random item from the array
     // return the random item
+    
+  $randomQuote = array_rand($quotes);
+     return $quotes[$randomQuote];
 
-}   // (array $array)
+  /*foreach ($quotes[$randomQuote] as $key => $val)
+  {
+  // echo $quotes[$randomQuote]["quote"];
+  echo $val . "<br>";
+  } */
+} 
+ $test = getRandomQuote($quotes);
+// check output:
+    // echo $test["quote"];
+// $test ="Every great developer you know got there by solving problems they were unqualified to solve until they actually did it.";
 
 
-
-
+// ### Variant 2:
+/* function getRandomQuote(array $arr){
+    $randomKey = rand(0, count($arr) - 1);
+    echo $arr[$randomKey];
+    } 
+*/
 
 // #################################################################
 // Create the printQuote funtion and name it printQuote
@@ -100,11 +120,7 @@ function  printQuote(array $array) {
    // display the complete HTML string
 
 }
-/*
-$farbe = 'green';
-$frucht = 'apple';
-echo "test";
-*/
+
 // ##################################################################
 
 
