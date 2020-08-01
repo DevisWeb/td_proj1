@@ -11,12 +11,14 @@
  * year - optional - number identifying year of the quote. If not known => NOT include item in inner array
    ==> create printQuote() function that prints the quotes to the screen.
 
+// create at least 5 quotes with at least two items!
+
 $quotes = array(
     array(
-        "quote" => "",
-        "source" => "",
-        "citation" => "",
-        "year" => ,
+        "quote" => "",      // *required
+        "source" => "",     // *required
+        "citation" => "",   //  optional
+        "year" => ,         //  optional
         ),
         (
         ...
@@ -25,13 +27,22 @@ $quotes = array(
 */
 $quotes = array(
     [
-        "quote" => "",
-        "source" => "",
-        "citation" => "",
+        "quote" => "quote1",
+        "source" => "src1",
+        "citation" => "cit1", 
         "year" => 2020,
     ],
-        ["quote" => "dd",
-        "source" => ""
+    ["quote" => "quote2",
+        "source" => "src2"
+    ],
+    ["quote" => "quote3",
+        "source" => "src3"
+    ],
+    ["quote" => "quote4",
+        "source" => "src4"
+    ],
+    ["quote" => "quote5",
+        "source" => "src5"
     ]
 );
 
