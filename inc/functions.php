@@ -67,17 +67,17 @@ echo "</pre>";
   $randomQuote = array_rand($quotes);
      return $quotes[$randomQuote];
 
+// test output all:
   /*foreach ($quotes[$randomQuote] as $key => $val)
   {
   // echo $quotes[$randomQuote]["quote"];
   echo $val . "<br>";
   } */
 } 
- $test = getRandomQuote($quotes);
-// check output:
-    // echo $test["quote"];
-// $test ="Every great developer you know got there by solving problems they were unqualified to solve until they actually did it.";
 
+// check output:
+ // $quoteItem = getRandomQuote($quotes);
+ // echo $quoteItem["quote"] . "<br>";
 
 // ### Variant 2:
 /* function getRandomQuote(array $arr){
@@ -87,8 +87,7 @@ echo "</pre>";
 */
 
 // #################################################################
-// Create the printQuote funtion and name it printQuote
-// function takes one param called array 
+// printQuote funtion takes one param called array 
 
 // body of function:
 // getRandomQuote should be called on array of quote obejcts, 
@@ -110,19 +109,36 @@ echo "</pre>";
 // This is where your conditionals will come in handy.
 // The printQuote function should display the completed HTML string
 
-function  printQuote(array $array) {
-   // create a variable that calls the getRandomQuote() function, passing in the quotes array as an argument
+function  printQuote(array $quotes) {
+   // create a variable that calls the getRandomQuote() function
+   // passing in the quotes array as an argument
+    $quoteItem = getRandomQuote($quotes); 
+   
    // create a variable that initiates your HTML string
-   // using the template in the project instructions, add the two default quote properties
+    $quoteOutput = "";
+   // using the template in the project instructions, 
+    $quoteOutput .= '<p class="quote">' . $quoteItem["quote"] . '</p>';
+    $quoteOutput .= '<p class="source">' . $quoteItem["source"];
+
+   // add the two default quote properties
    // if the quote contains a citation value, add it the string
    // if the quote contains a year value, add it the string
-   // close the string with the necessary closing HTML tags
-   // display the complete HTML string
 
+    if( isset($quoteItem['citation'])){
+        $quoteOutput .= '<span class="citation">' . $quoteItem["citation"] . '</span>';
+    }
+    if( isset($quoteItem['citation'])){
+        $quoteOutput .= '<span class="year">' . $quoteItem["citation"] . '</span>';
+    }
+   // close the string with the necessary closing HTML tags
+   
+    $quoteOutput .= '</p>';  
+   
+return $quoteOutput;
 }
+printQuote($quotes);
 
 // ##################################################################
 
 
-// Call the printQuote function within the 'quote-box' HTML element.
 
