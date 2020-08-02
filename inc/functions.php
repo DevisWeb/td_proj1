@@ -43,7 +43,7 @@ $quotes = array(
 // Create getRandomQuote function (one param: array)
 // select + return random quote element from quotes array
 // select items with "box notation" array[0]
-
+// -----------------------------------------------------------------
 // ### using required function - rand — "Generate a random integer":
 // https://www.php.net/manual/en/function.rand.php
 function getRandomQuote($arr) {  
@@ -118,11 +118,11 @@ function getRandomBackgroundColor(){
 //    For example, a tags property and add to the string
 // => DONE
 
-// 2. Random background color.
+// 2. Random background color
 //    quote change => randomly change background color of page
 // => DONE
 
-// 3. Auto-refresh the quote.
+// 3. Auto-refresh the quote
 //    after a set amount of time (20-30 sec) print new quote to page
 //    (Hint: Meta tags can be one way to accomplish this)
-// => TODO
+// => DONE (see index.php)
