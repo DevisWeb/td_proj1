@@ -94,7 +94,8 @@ body {
   border-radius: 4px;
   border: 2px solid #fff;
   color: #fff;
-  /* changed bg color to transparent or unset for task 2 of 3 extra credit 
+  /* change bg color to transparent or unset 
+  for background-color according to random background of page (task 2 of 3 extra credit) 
   (default: #36b55c) */
   background-color: transparent; 
   padding: 15px 0;
