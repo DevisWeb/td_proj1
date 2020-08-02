@@ -6,37 +6,51 @@
 // with at least 5 quotes (associative inner array) 
 // with at least two default items (quote, source) + two optional (citation, year)
 // Extra Credit: for "exceeds" rating: add more items to inner quote (category)
-$cat = array("business", "humor", "motivational", "technology", "zen");
+$cat = array("business", "humor", "inspiration", "motivation", "technology", "zen");
 
 $quotes = array(
-    [
-    "quote" => "quote1",
-    "source" => "src1",
-    "citation" => "cit1", 
-    "year" => 2020,
-    "cat" => $cat[1]
+    [   
+    "quote" => "If you spend too much time thinking about a thing, you’ll never get it done.",
+    "source" => "Bruce Lee",
+    "cat" => $cat[3]
     ],
     [   
-    "quote" => "quote2",
-    "source" => "src2",
-    "cat" => $cat[1]
+    "quote" => "Adapt what is usefull, reject what is useless, and add what is specifically your own.",
+    "source" => "Bruce Lee",
+    "cat" => $cat[2]
     ],
     [   
-    "quote" => "quote3",
-    "source" => "src3",
-    "cat" => $cat[1]
+    "quote" => "I make myself rich by making my wants few. ",
+    "source" => "David Henry Thoreau ",
+    "cat" => $cat[3]
     ],
     [   
-    "quote" => "quote4",
-    "source" => "src4",
-    "cat" => $cat[1]
+    "quote" => "Strength is not born from strength. Strength can be born only from weakness. So be glad of your weaknesses now, they are the beginnings of your strength.",
+    "source" => "Dr. Claire Weekes",
+    "cat" => $cat[3]
     ],
     [   
-    "quote" => "quote5",
-    "source" => "src5",
-    "citation" => "cit5", 
-    "year" => 2015,
+    "quote" => "Choose a job you love, and you will never have to work a day in your life.",
+    "source" => "Confucius",
+    "cat" => $cat[0]
     ],
+    [   
+    "quote" => "The only true wisdom is in knowing you know nothing.",
+    "source" => "Socrates",
+    "cat" => $cat[2]
+    ],
+    [   
+    "quote" => "We don' t make mistakes, just little happy accidents.",
+    "source" => "Bob Ross",
+    "cat" => $cat[2]
+    ],
+    [   
+    "quote" => "Most people are other people. Their thoughts are someone else’s opinions, their lives a mimicry, their passions a quotation.",
+    "source" => "Oscar Wilde",
+    "citation" => "De Profundis",
+    "year" => 1905,
+    "cat" => $cat[3]
+    ]    
 ); 
 
 // #################################################################
