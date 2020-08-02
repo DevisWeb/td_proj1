@@ -40,7 +40,7 @@ $quotes = array(
     "cat" => $cat[2]
     ],
     [   
-    "quote" => "We don' t make mistakes, just little happy accidents.",
+    "quote" => "We don’t make mistakes, just little happy accidents.",
     "source" => "Bob Ross",
     "cat" => $cat[2]
     ],
