@@ -5,7 +5,7 @@
 // Create multidimensional array $quotes (takes one param: array)
 // with at least 5 quotes (associative inner array) 
 // with at least two default items (quote, source) + two optional (citation, year)
-// for "exceeds" rating: add more items to inner quote (category)
+// Extra Credit: for "exceeds" rating: add more items to inner quote (category)
 $cat = array("business", "humor", "motivational", "technology", "zen");
 
 $quotes = array(
@@ -55,9 +55,9 @@ function getRandomQuote($arr) {
 // (https://www.php.net/manual/en/function.array-rand.php)
 /* function getRandomQuote2($arr){
     $randomQuote = array_rand($arr);
-     return $arr[$randomQuote];
+    return $arr[$randomQuote];
     } 
-** Compare Outputs - rand vs array_rand:
+** Compare Outputs - rand() vs array_rand():
     $randoutput = getRandomQuote($quotes);
         print_r($randoutput); // Array ( [quote] => quote5 [source] => src5 ) 
         echo "<br/>"; 
@@ -92,7 +92,7 @@ function  printQuote($arr) {
     if( isset($quoteItem['citation'])){
         $quoteOutput .= '<span class="year">' . $quoteItem["year"] . '</span>';
     }
-   // for "exceeds" rating add extra item to string:
+   // Extra Credit: Task 1 of 3 for "exceeds" rating add extra item to string:
     if( isset($quoteItem['cat'])){
         $quoteOutput .= '<span class="cat">' . $quoteItem["cat"] . '</span>';
     }
@@ -103,6 +103,14 @@ function  printQuote($arr) {
 }
 // printQuote($quotes); // function is called directly within html quote-box of index.php as required 
 
+// Extra Credit - Task 2 of 3 for "exceeds" rating - RandomBackgroundColor:
+function getRandomBackgroundColor(){
+    $bgColors = array('#5fb2f2', '#282E33', '#5f69f2' , '#25373A', '#0099f7' , '#164852', '#495E67', '#FF3838');
+    $randomBgColor = $bgColors[array_rand($bgColors)];
+    echo '<body style=background-color:'. $randomBgColor .'>';
+}
+
+
 // ##################################################################
 // TODO: Extra Credit to get an "exceeds" rating
 
@@ -112,7 +120,7 @@ function  printQuote($arr) {
 
 // 2. Random background color.
 //    quote change => randomly change background color of page
-// => TODO 
+// => DONE
 
 // 3. Auto-refresh the quote.
 //    after a set amount of time (20-30 sec) print new quote to page

@@ -16,6 +16,7 @@ include 'inc/functions.php';
     <?php  
     // Call printQuote function within 'quote-box' HTML element:
     echo printQuote($quotes); 
+    getRandomBackgroundColor();
     ?>
     </div>
     <button id="loadQuote" onclick="window.location.reload(true)" >Show another quote</button>
