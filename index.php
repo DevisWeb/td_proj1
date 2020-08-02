@@ -12,14 +12,11 @@ include 'inc/functions.php';
 </head>
 <body>
   <div class="container">
-    <div id="quote-box">
-    
-    <?php // Call the printQuote function within the 'quote-box' HTML element. ?>
-    <?php  echo printQuote($quotes); ?>
-<!--
-      <p class="quote"><?php // echo "Zitat: " . $test["quote"];?></p>
-      <p class="source">Patrick McKenzie<span class="citation">Twitter</span><span class="year">2016</span></p>
--->
+    <div id="quote-box">  
+    <?php  
+    // Call printQuote function within 'quote-box' HTML element:
+    echo printQuote($quotes); 
+    ?>
     </div>
     <button id="loadQuote" onclick="window.location.reload(true)" >Show another quote</button>
   </div>
