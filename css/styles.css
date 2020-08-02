@@ -68,6 +68,22 @@ body {
   font-style: normal;
 }
 
+/* add stylings for class cat (new array item for "exceeds" rating )*/
+.cat {
+  font-style: normal;
+  display: block;
+  font-style: normal;
+  text-transform: capitalize;
+}
+
+.cat:before {
+  content: "*** ";
+}
+
+.cat:after {
+  content: " ***";
+}
+
 #loadQuote {
   position: fixed;
   width: 12em;
